@@ -1,0 +1,231 @@
+:root {
+  --color-white-100: hsl(206, 0%, 100%);
+  --color-white-200: hsl(206, 0%, 90%);
+  --color-white-300: hsl(206, 0%, 80%);
+  --color-white-400: hsl(206, 0%, 65%);
+  --color-white-500: hsl(206, 0%, 50%);
+  --color-black-100: hsl(217, 30%, 18%);
+  --color-black-200: hsl(217, 27%, 15%);
+  --color-black-300: hsl(217, 27%, 12%);
+  --color-black-400: hsl(217, 52%, 9%);
+  --color-blue-100: hsl(215, 97%, 87%);
+  --color-blue-200: hsl(215, 96%, 78%);
+  --color-blue-300: hsl(215, 94%, 68%);
+  --color-blue-400: hsl(215, 91%, 60%);
+  --color-blue-500: hsl(215, 83%, 53%);
+  --color-blue-600: hsl(215, 76%, 48%);
+  --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --background-gradient: linear-gradient(to right, #1d375d, #ffffff);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-white-100);
+  background: rgb(138, 175, 230);
+  background: linear-gradient(
+    90deg,
+    rgb(138, 175, 230) 1%,
+    rgba(11, 20, 35, 0.9472163866) 57%,
+    rgb(11, 20, 35) 99%
+  );
+}
+body.darkmode {
+  color: var(--color-white-100);
+  background-color: var(--color-black-400);
+}
+
+main {
+  overflow: hidden;
+}
+
+p {
+  text-wrap: balance;
+}
+
+a,
+button {
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.svg-blue {
+  color: #1c2431;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.color-white {
+  color: white !important;
+}
+
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 1rem);
+}
+
+@media (max-width: 576px) {
+  .modal-dialog-centered {
+    min-height: 100%;
+  }
+}
+
+.modal-xl {
+  max-width: 90%;
+}
+
+.modal {
+  background-color: #0e0e0fdc;
+}
+
+.modal-body {
+  background-color: #1c2431;
+}
+
+.modal-header {
+  background-color: #1c2431;
+  justify-content: flex-end;
+  border: none !important;
+  font-size: 35px;
+  border-radius: 0 !important;
+}
+
+.close {
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .modal-xl {
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+
+  .modal-header {
+    background-color: transparent;
+    position: fixed !important;
+    z-index: 999;
+    right: 15px;
+    top: 0;
+    border: none !important;
+  }
+}
+
+.sky {
+  background-color: rgb(36, 119, 235);
+}
+
+.sky-color {
+  color: rgb(36, 119, 235);
+}
+
+.overlay {
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.7) 50%
+  ); */
+
+  background-color: rgba(19, 22, 56, 0.669);
+  /* background-image: url("../assets/video-bg.webp"); */
+  background-size: 3px 3px;
+  z-index: 0;
+}
+
+.bg-blue {
+  background-color: #2477eb;
+}
+
+.no-select {
+  pointer-events: none;
+  user-select: none;
+}
+
+.mt-personalizado {
+  margin-top: 150px !important;
+}
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 22px;
+  z-index: 999;
+  transition: filter 0.35s, transform 0.35s;
+}
+
+.btn-instagram {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 999;
+  transition: filter 0.35s, transform 0.35s;
+}
+
+.btn-facebook {
+  position: fixed;
+  bottom: 140px;
+  right: 20px;
+  z-index: 999;
+  transition: filter 0.35s, transform 0.35s;
+}
+
+.bg-body {
+  background: rgb(138, 175, 230);
+  background: linear-gradient(
+    90deg,
+    rgb(138, 175, 230) 1%,
+    rgba(11, 20, 35, 0.9472163866) 57%,
+    rgb(11, 20, 35) 99%
+  );
+}
