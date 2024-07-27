@@ -43,7 +43,30 @@ function closeModal() {
 }
 
 // Ejemplo de cómo podrías llamar estas funciones:
-document.getElementById("openModalButton").addEventListener("click", openModal);
+// document.getElementById("openModalButton").addEventListener("click", openModal);
+// document
+//   .getElementById("closeModalButton")
+//   .addEventListener("click", closeModal);
+
+//SPINNER
+
 document
-  .getElementById("closeModalButton")
-  .addEventListener("click", closeModal);
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    // Evitar el envío inmediato del formulario
+    event.preventDefault();
+
+    // Referencias al botón y al spinner
+    const submitBtn = document.getElementById("submitBtn");
+    const spinner = submitBtn.querySelector(".spinner");
+    const buttonText = submitBtn.querySelector(".button-text");
+
+    // Cambiar el texto por el spinner
+    buttonText.style.display = "none"; // Ocultar el texto 'ENVIAR'
+    spinner.classList.remove("hidden"); // Mostrar el spinner
+
+    // Enviar el formulario después de 1 segundo para mostrar el spinner
+    setTimeout(() => {
+      this.submit();
+    }, 1000); // Puedes ajustar o eliminar el retraso si lo prefieres
+  });

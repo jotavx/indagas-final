@@ -229,3 +229,7 @@ body.modal-open {
     rgb(11, 20, 35) 99%
   );
 }
+
+.non-resizable-textarea {
+  resize: none;
+}
