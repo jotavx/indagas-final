@@ -233,3 +233,7 @@ body.modal-open {
 .non-resizable-textarea {
   resize: none;
 }
+
+.pointer {
+  cursor: pointer;
+}
